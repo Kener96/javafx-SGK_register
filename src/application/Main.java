@@ -1,10 +1,14 @@
 package application;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import library.AlertBox;
 
 public class Main extends Application {
 
@@ -14,8 +18,16 @@ public class Main extends Application {
                 "MainPane.fxml"));
         Scene scene = new Scene(parent);
         stage.setScene(scene);
-        stage.setTitle("Library");
+        stage.setTitle("Register Window");
         stage.show();
+
+
+
+
+
+
+
+
 
     }
 

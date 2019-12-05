@@ -1,21 +1,23 @@
 package library;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
+import java.sql.Date;
 
-public class Books {
+public class Registers {
 
 	private int id;
     private String name;
     private String surname;
     private String department ;
     private String mail;
+    private Date date;
 
-    public Books(int Id, String Name, String Surname, String Department, String Mail){
+    public Registers(int Id, String Name, String Surname, String Department, String Mail, Date Date){
         this.id = Id;
     	this.name=Name;
         this.surname = Surname;
         this.department=Department;
         this.mail=Mail;
+        this.date=Date;
     }
 
     public int getId() {
@@ -35,5 +37,8 @@ public class Books {
 
     public String getMail() {
         return mail;
+    }
+    public Date getDate() {
+        return date;
     }
 }
