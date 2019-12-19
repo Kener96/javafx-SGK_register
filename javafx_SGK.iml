@@ -18,5 +18,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="javafx.graphics" level="project" />
+    <orderEntry type="library" name="src" level="project" />
   </component>
 </module>

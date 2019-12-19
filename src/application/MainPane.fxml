@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="773.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="860.0" style="-fx-background-color: #B1D4E0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <VBox layoutX="5.0" layoutY="22.0" prefHeight="215.0" prefWidth="73.0" spacing="15.0">
+      <VBox layoutX="5.0" layoutY="166.0" prefHeight="244.0" prefWidth="98.0" spacing="18.0">
          <children>
-            <Label text="Number">
+            <Label text="Numara" textFill="#145da0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright" size="14.0" />
                </font>
             </Label>
-            <Label text="Name">
+            <Label text="Ad" textFill="#145da0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright" size="14.0" />
                </font>
             </Label>
-            <Label text="Surname">
+            <Label text="Soyad" textFill="#145da0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright" size="14.0" />
                </font>
             </Label>
-            <Label text="Department">
+            <Label text="Bölüm" textFill="#145da0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright" size="14.0" />
                </font>
             </Label>
-            <Label text="Mail">
+            <Label text="Mail" textFill="#145da0">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Lucida Bright" size="14.0" />
                </font>
             </Label>
-            <Label text="Staj tarihi" />
+            <Label text="Staj Başlangıç" textFill="#145da0">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font></Label>
+            <Label prefHeight="18.0" prefWidth="71.0" text="Staj Bitiş" textFill="#145da0">
+               <font>
+                  <Font name="Lucida Bright" size="14.0" />
+               </font></Label>
          </children>
       </VBox>
-      <VBox layoutX="87.0" layoutY="22.0" prefHeight="205.0" prefWidth="129.0" spacing="10.0">
+      <VBox layoutX="103.0" layoutY="166.0" prefHeight="244.0" prefWidth="129.0" spacing="10.0">
          <children>
             <TextField fx:id="idField" />
             <TextField fx:id="nameField" />
@@ -44,27 +53,47 @@
             <TextField fx:id="departmentField" />
             <TextField fx:id="mailField" />
             <DatePicker fx:id="datePicker" />
-           
+            <DatePicker fx:id="datePicker2" prefHeight="25.0" prefWidth="138.0" />
+
          </children>
       </VBox>
-      <HBox layoutX="26.0" layoutY="250.0" spacing="10.0">
+      <HBox layoutX="5.0" layoutY="415.0" prefHeight="32.0" prefWidth="227.0" spacing="1.0">
          <children>
-            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton"  prefHeight="30.0" prefWidth="61.0" text="Insert" />
-            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="60.0" text="Update" />
-            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #2E8BC0;" text="Ekle" textFill="WHITE" />
+            <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #2E8BC0;" text="Güncelle" textFill="WHITE" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #2E8BC0;" text="Sil" textFill="WHITE" />
+            <ImageView fitHeight="30.0" fitWidth="39.0" onMousePressed="#ClearButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/src/broom.png" />
+               </image>
+            </ImageView>
          </children>
       </HBox>
-      <TableView fx:id="TableView" layoutX="238.0" layoutY="21.0" prefHeight="272.0" prefWidth="526.0">
+      <TableView fx:id="TableView" layoutX="240.0" layoutY="44.0" onMouseClicked="#clickItem" onSort="#Filtering" prefHeight="445.0" prefWidth="606.0" style="-fx-background-color: #E7F2F8;">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="68.0" text="Number" />
-          <TableColumn fx:id="nameColumn" prefWidth="79.0" text="Name" />
-            <TableColumn fx:id="surnameColumn" prefWidth="83.0" text="Surname" />
-            <TableColumn fx:id="departmentColumn" prefWidth="84.0" text="Department" />
-            <TableColumn fx:id="mailColumn" prefWidth="111.0" text="Mail" />
-           <TableColumn fx:id="dateColumn" prefWidth="111.0" text="Date" />
+          <TableColumn fx:id="idColumn" prefWidth="73.0" text="Numara" />
+          <TableColumn fx:id="nameColumn" prefWidth="81.0" text="Ad" />
+            <TableColumn fx:id="surnameColumn" prefWidth="83.0" text="Soyad" />
+            <TableColumn fx:id="departmentColumn" prefWidth="93.0" text="Bölüm" />
+            <TableColumn fx:id="mailColumn" prefWidth="96.0" text="Mail" />
+           <TableColumn fx:id="dateColumn" prefWidth="97.0" text="Başlama Tarihi" />
+           <TableColumn fx:id="dateColumn2" prefWidth="96.0" text="Bitiş Tarihi" />
         </columns>
       </TableView>
-      <Button fx:id="button" layoutX="42.0" layoutY="293.0" mnemonicParsing="false" onAction="#alert1" text="Alert" />
-      <Button fx:id="buttonnotification" layoutX="116.0" layoutY="293.0" mnemonicParsing="false" text="Notification" onAction="#handleButtonAction" />
+      <HBox alignment="TOP_CENTER" layoutX="243.0" layoutY="6.0" prefHeight="30.0" prefWidth="586.0">
+         <children>
+            <ImageView fx:id="image1" fitHeight="32.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/src/loupe (1).png" />
+               </image></ImageView>
+
+            <TextField fx:id="filteredField" nodeOrientation="LEFT_TO_RIGHT" onAction="#Filtering" prefHeight="30.0" prefWidth="564.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+         </children>
+      </HBox>
+      <Circle fx:id="mycircle" fill="DODGERBLUE" layoutX="117.0" layoutY="79.0" radius="79.0" stroke="BLACK" strokeType="INSIDE" />
+      
    </children>
 </AnchorPane>
