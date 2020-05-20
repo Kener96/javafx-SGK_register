@@ -9,7 +9,6 @@
       <root url="jar://$PATH_TO_FX$/lib/javafx.media.jar!/" />
       <root url="jar://$PATH_TO_FX$/lib/javafx.swing.jar!/" />
       <root url="jar://$PATH_TO_FX$/lib/javafx.web.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../controlsfx-8.40.11.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

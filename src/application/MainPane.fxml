@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="860.0" style="-fx-background-color: #B1D4E0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: #B1D4E0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
       <VBox layoutX="5.0" layoutY="166.0" prefHeight="244.0" prefWidth="98.0" spacing="18.0">
          <children>
@@ -69,15 +69,15 @@
             </ImageView>
          </children>
       </HBox>
-      <TableView fx:id="TableView" layoutX="240.0" layoutY="44.0" onMouseClicked="#clickItem" onSort="#Filtering" prefHeight="445.0" prefWidth="606.0" style="-fx-background-color: #E7F2F8;">
+      <TableView fx:id="TableView" layoutX="240.0" layoutY="44.0" onMouseClicked="#clickItem" onSort="#Filtering" prefHeight="497.0" prefWidth="689.0" style="-fx-background-color: #E7F2F8;">
         <columns>
-          <TableColumn fx:id="idColumn" prefWidth="73.0" text="Numara" />
-          <TableColumn fx:id="nameColumn" prefWidth="81.0" text="Ad" />
-            <TableColumn fx:id="surnameColumn" prefWidth="83.0" text="Soyad" />
-            <TableColumn fx:id="departmentColumn" prefWidth="93.0" text="Bölüm" />
-            <TableColumn fx:id="mailColumn" prefWidth="96.0" text="Mail" />
-           <TableColumn fx:id="dateColumn" prefWidth="97.0" text="Başlama Tarihi" />
-           <TableColumn fx:id="dateColumn2" prefWidth="96.0" text="Bitiş Tarihi" />
+          <TableColumn fx:id="idColumn" prefWidth="96.00001525878906" text="Numara" />
+          <TableColumn fx:id="nameColumn" prefWidth="83.0" text="Ad" />
+            <TableColumn fx:id="surnameColumn" prefWidth="84.0" text="Soyad" />
+            <TableColumn fx:id="departmentColumn" prefWidth="98.0" text="Bölüm" />
+            <TableColumn fx:id="mailColumn" prefWidth="103.0" text="Mail" />
+           <TableColumn fx:id="dateColumn" prefWidth="107.0" sortable="false" text="Başlama Tarihi" />
+           <TableColumn fx:id="dateColumn2" prefWidth="117.0" text="Bitiş Tarihi" />
         </columns>
       </TableView>
       <HBox alignment="TOP_CENTER" layoutX="243.0" layoutY="6.0" prefHeight="30.0" prefWidth="586.0">
@@ -94,6 +94,15 @@
          </children>
       </HBox>
       <Circle fx:id="mycircle" fill="DODGERBLUE" layoutX="117.0" layoutY="79.0" radius="79.0" stroke="BLACK" strokeType="INSIDE" />
+      <VBox layoutX="955.0" layoutY="44.0" prefHeight="463.0" prefWidth="271.0">
+         <children>
+            <ScrollPane fx:id="scrollpane" prefHeight="462.0" prefWidth="271.0">
+               <content>
+                  <TextArea fx:id="textarea" prefHeight="122.0" prefWidth="269.0" promptText="Bildirimler" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
       
    </children>
 </AnchorPane>

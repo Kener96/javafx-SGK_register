@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="javafxTEST">
+    <output-path>$PROJECT_DIR$/out/artifacts/javafxTEST</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.kamile" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="javafx_SGK.jar">
+        <element id="library" level="project" name="javafx.graphics" />
+        <element id="file-copy" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.18.jar" />
+        <element id="module-output" name="javafx_SGK" />
+      </element>
+    </root>
+  </artifact>
+</component>
